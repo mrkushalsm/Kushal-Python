@@ -1,0 +1,5 @@
+file1 = open("/home/kushs/Kushal Code/Kushal Python/file_test.txt", "r")
+temp = file1.read()
+size = len(temp)
+print(temp)
+print(size, "bytes")
