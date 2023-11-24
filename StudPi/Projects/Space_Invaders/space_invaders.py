@@ -12,15 +12,15 @@ screen = pygame.display.set_mode((800, 600))
 
 # Title and Icon
 pygame.display.set_caption("Space_Invaders")
-icon = pygame.image.load("C:\\Users\\mrkus\\Kushal Code\\Kushal Python\\StudPi\\Projects\\Space_Invaders\\game_icon.png")
+icon = pygame.image.load("C:\\Users\\mrkus\\Kushal Code\\Kushal-Python\\StudPi\\Projects\\Space_Invaders\\game_icon.png")
 pygame.display.set_icon(icon)
 
 # Background
 background = pygame.image.load(
-    "C:\\Users\\mrkus\\Kushal Code\\Kushal Python\\StudPi\\Projects\\Space_Invaders\\background_1.jpg")
+    "C:\\Users\\mrkus\\Kushal Code\\Kushal-Python\\StudPi\\Projects\\Space_Invaders\\background_1.jpg")
 
 # Background Sound
-mixer.music.load("C:\\Users\\mrkus\\Kushal Code\\Kushal Python\\StudPi\\Projects\\Space_Invaders\\background.wav")
+mixer.music.load("C:\\Users\\mrkus\\Kushal Code\\Kushal-Python\\StudPi\\Projects\\Space_Invaders\\background.wav")
 mixer.music.play(-1)
 
 # Window Frame Config
@@ -29,7 +29,7 @@ mixer.music.play(-1)
 
 # Player
 player_img = pygame.image.load(
-    "C:\\Users\\mrkus\\Kushal Code\\Kushal Python\\StudPi\\Projects\\Space_Invaders\\spaceship.png")
+    "C:\\Users\\mrkus\\Kushal Code\\Kushal-Python\\StudPi\\Projects\\Space_Invaders\\spaceship.png")
 player_x = 360
 player_y = 500
 player_x_change = 0
@@ -43,7 +43,7 @@ enemy_y_change = []
 no_of_enemies = 6
 for i in range(no_of_enemies):
     enemy_img.append(
-        pygame.image.load("C:\\Users\\mrkus\\Kushal Code\\Kushal Python\\StudPi\\Projects\\Space_Invaders\\ufo.png"))
+        pygame.image.load("C:\\Users\\mrkus\\Kushal Code\\Kushal-Python\\StudPi\\Projects\\Space_Invaders\\ufo.png"))
     enemy_x.append(random.randint(0, 735))
     """if enemy_x[key] - enemy_x[key - 1] < 20:
         enemy_x[key] += 65 - (enemy_x[key - 1] - enemy_x[key])
@@ -59,7 +59,7 @@ for i in range(no_of_enemies):
 
 # Bullet
 bullet_img = pygame.image.load(
-    "C:\\Users\\mrkus\\Kushal Code\\Kushal Python\\StudPi\\Projects\\Space_Invaders\\bullet.png")
+    "C:\\Users\\mrkus\\Kushal Code\\Kushal-Python\\StudPi\\Projects\\Space_Invaders\\bullet.png")
 bullet_x = 0
 temp_bullet_x = 0
 bullet_y = 500
@@ -165,7 +165,7 @@ while running:
                     temp_bullet_x = player_x
                     fire_bullet(temp_bullet_x, bullet_y)
                     bullet_sound = mixer.Sound(
-                        "C:\\Users\\mrkus\\Kushal Code\\Kushal Python\\StudPi\\Projects\\Space_Invaders\\bullet_shot.wav")
+                        "C:\\Users\\mrkus\\Kushal Code\\Kushal-Python\\StudPi\\Projects\\Space_Invaders\\bullet_shot.wav")
                     mixer.Sound.play(bullet_sound)
 
         elif event.type == pygame.KEYUP:
@@ -199,7 +199,7 @@ while running:
         isBulletColliding = collision(enemy_x[i], enemy_y[i], temp_bullet_x, bullet_y)
         if isBulletColliding:
             enemy_damage = mixer.Sound(
-                "C:\\Users\\mrkus\\Kushal Code\\Kushal Python\\StudPi\\Projects\\Space_Invaders\\enemy_killed.wav")
+                "C:\\Users\\mrkus\\Kushal Code\\Kushal-Python\\StudPi\\Projects\\Space_Invaders\\enemy_killed.wav")
             mixer.Sound.play(enemy_damage)
             bullet_y = 480
             bullet_state = "ready"
@@ -269,7 +269,7 @@ while running:
             game_over_display()
         mixer.music.stop()
         game_over_sound = mixer.Sound(
-                "C:\\Users\\mrkus\\Kushal Code\\Kushal Python\\StudPi\\Projects\\Space_Invaders\\game_over.wav")
+                "C:\\Users\\mrkus\\Kushal Code\\Kushal-Python\\StudPi\\Projects\\Space_Invaders\\game_over.wav")
         mixer.Sound.play(game_over_sound)
 
     player(player_x, player_y)
